@@ -1,0 +1,41 @@
+.header {
+    height: 10vh;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    box-shadow: 0px 2px 4px 0px rgba(214, 207, 207, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__logo {
+      transform: scale(95%);
+      padding-top: 15px;
+    }
+}
+
+.footer {
+  background-color: rgb(90, 88, 88);
+  width: 100vw;
+  height: 33vh;
+  &__logo {
+    filter: brightness(200);
+    padding: 30px 0 15px 25px;
+    width: 130px;
+  }
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0px 20px 0px 30px;
+  }
+  &__links {
+    padding-top: 10px;
+    &--b {
+      font-weight:bold;
+    }
+    & a {
+    display: flex;
+    }
+    & i {
+    padding-right: 10px;
+    }
+  }
+}

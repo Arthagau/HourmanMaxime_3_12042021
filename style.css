@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body, h1, h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+.header__logo {
+  font-family: "Shrikhand", sans-serif;
+}
+
+* a {
+  color: white;
+}
+
+.header {
+  height: 10vh;
+  border-bottom: 2px solid white;
+  box-shadow: 0px 2px 4px 0px rgba(214, 207, 207, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__logo {
+  transform: scale(95%);
+  padding-top: 15px;
+}
+
+.footer {
+  background-color: #5a5858;
+  width: 100vw;
+  height: 33vh;
+}
+.footer__logo {
+  filter: brightness(200);
+  padding: 30px 0 15px 25px;
+  width: 130px;
+}
+.footer__nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0px 20px 0px 30px;
+}
+.footer__links {
+  padding-top: 10px;
+}
+.footer__links--b {
+  font-weight: bold;
+}
+.footer__links a {
+  display: flex;
+}
+.footer__links i {
+  padding-right: 10px;
+}
+
+.loc {
+  height: 8vh;
+  background-color: rgba(184, 176, 176, 0.26);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loc__town {
+  display: flex;
+  justify-content: space-between;
+  width: 140px;
+  padding-right: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */

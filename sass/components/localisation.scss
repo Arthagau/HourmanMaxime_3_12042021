@@ -1,0 +1,14 @@
+
+.loc {
+    height: 8vh;
+    background-color: rgba(184, 176, 176, 0.26);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__town {
+        display: flex;
+        justify-content: space-between;
+        width: 140px;
+        padding-right: 30px;
+    }
+}
