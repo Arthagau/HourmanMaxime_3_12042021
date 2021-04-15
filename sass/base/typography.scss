@@ -1,6 +1,7 @@
 $primary: #9356DC;
 $secondary: #FF79DA;
 $tertiary: #99E2D0;
+$bgcolor: rgba(221, 216, 216, 0.308);
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
 
@@ -10,6 +11,23 @@ body, h1, h2 {
 .header__logo {
     font-family: 'Shrikhand', sans-serif;
 }
-* a {
+.footer a {
     color: white
+}
+.loc i, .fct i {
+    color: rgb(110, 107, 107);
+}
+.intro, .fct__list, .rst {
+    background-color: $bgcolor;
+}
+.rst {
+    &__body {
+    font-size: 0.9rem;}
+    &__descr {
+        color: black;
+    }
+    &__body--new {
+        background-color: $tertiary;
+        color: darken($tertiary, 36%);
+        }
 }
