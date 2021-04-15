@@ -11,7 +11,7 @@ body, h1, h2 {
 .header__logo {
     font-family: 'Shrikhand', sans-serif;
 }
-* a {
+.footer a {
     color: white
 }
 .loc i, .fct i {
@@ -20,10 +20,14 @@ body, h1, h2 {
 .intro, .fct__list, .rst {
     background-color: $bgcolor;
 }
-.rst__body {
-    font-size: 0.9rem;
-}
-.rst__body--new {
-background-color: $tertiary;
-color: darken($tertiary, 36%);
+.rst {
+    &__body {
+    font-size: 0.9rem;}
+    &__descr {
+        color: black;
+    }
+    &__body--new {
+        background-color: $tertiary;
+        color: darken($tertiary, 36%);
+        }
 }

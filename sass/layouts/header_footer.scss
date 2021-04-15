@@ -14,7 +14,7 @@
 .footer {
   background-color: rgb(90, 88, 88);
   width: 100vw;
-  height: 33vh;
+  height: 250px;
   &__logo {
     filter: brightness(200);
     padding: 30px 0 15px 25px;
@@ -28,6 +28,7 @@
   }
   &__links {
     padding-top: 10px;
+    width: 200px;
     &--b {
       font-weight:bold;
     }
