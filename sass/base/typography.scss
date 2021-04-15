@@ -17,6 +17,13 @@ body, h1, h2 {
 .loc i, .fct i {
     color: rgb(110, 107, 107);
 }
-.intro, .fct__list {
+.intro, .fct__list, .rst {
     background-color: $bgcolor;
+}
+.rst__body {
+    font-size: 0.9rem;
+}
+.rst__body--new {
+background-color: $tertiary;
+color: darken($tertiary, 36%);
 }
