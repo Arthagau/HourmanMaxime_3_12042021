@@ -7,19 +7,14 @@
     &__title {
         text-align: center;
         width: 70%;
-        padding-top: 15px;
+        padding-top: 25px;
     }
     &__description {
         text-align: center;
         width: 80%;
+        padding-bottom: 20px;
     }
     &__btn {
-        height: 45px;
-        width: 200px;
-        margin-bottom: 30px;
-        border: 1px solid lightgray;
-        border-radius: 250px;
-        color: white;
-        background-color: $primary;
+        margin-bottom: 50px;
     }
 }

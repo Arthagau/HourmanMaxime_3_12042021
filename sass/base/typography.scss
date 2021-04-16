@@ -1,23 +1,23 @@
 $primary: #9356DC;
 $secondary: #FF79DA;
 $tertiary: #99E2D0;
-$bgcolor: rgba(221, 216, 216, 0.308);
+$bgcolor: #f6f6f6;
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&family=Shrikhand&display=swap');
 
 body, h1, h2 {
     font-family: 'Roboto', sans-serif;
 }
-.header__logo {
+.header__logo, .menu h1 {
     font-family: 'Shrikhand', sans-serif;
 }
-.footer a {
-    color: white
+.loc i, .header__return {
+    color: #353535;
 }
-.loc i, .fct i {
-    color: rgb(110, 107, 107);
+.fct i {
+    color: #7e7e7e;
 }
-.intro, .fct__list, .rst {
+.intro, .fct__list, .rst, .menu {
     background-color: $bgcolor;
 }
 .rst {
@@ -30,4 +30,18 @@ body, h1, h2 {
         background-color: $tertiary;
         color: darken($tertiary, 36%);
         }
+}
+.menu {
+    font-size: 0.8em;
+    & h2 {
+        text-transform: uppercase;
+        font-size: 1.3em;
+        font-weight: 300;
+    }
+}
+.footer {
+    font-size: 0.9em;
+    & a {
+        color: white  
+    }
 }
