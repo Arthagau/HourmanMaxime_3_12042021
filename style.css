@@ -293,7 +293,7 @@ body, h1, h2 {
 }
 .list__dishes__description {
   padding-left: 10px;
-  height: 45px;
+  height: 40px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
