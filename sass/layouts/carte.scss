@@ -1,10 +1,14 @@
 .background {
     height: 250px;
+    width: 100%;
     display: flex;
     &__image {
         height: 120%;
         width: 100%;
-        z-index: -1;
+        z-index: -2;
+        &__width {
+            height: 200%;
+        }
     }
 }
 .menu {
