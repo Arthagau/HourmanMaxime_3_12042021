@@ -1,20 +1,32 @@
 .header {
-    height: 65px;
-    border-bottom: 2px solid rgb(255, 255, 255);
-    box-shadow: 0px 2px 4px 0px rgba(214, 207, 207, 0.75);
+    height: 55px;
+    margin-bottom: 2px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-bottom: 2px solid #afafaf94;
+    box-shadow: 0px 0px 120px 15px #18181857;
     &__logo {
-      transform: scale(95%);
-      padding-top: 15px;
+      transform: scale(80%);
+      padding-top: 10px;
+    }
+    &__return {
+      transform: scale(110%);
+      position: relative;
+      right: 15%;
+      padding-top: 5px;
+    }
+    &__menu {
+      border-bottom: none;
+      box-shadow: none;
+      z-index: 1;
     }
 }
 
 .footer {
-  background-color: rgb(90, 88, 88);
+  background-color: #353535;
   width: 100vw;
-  height: 250px;
+  height: 230px;
   &__logo {
     filter: brightness(200);
     padding: 30px 0 15px 25px;

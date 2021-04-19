@@ -1,2 +1,15 @@
 .btn {
+        height: 50px;
+        width: 210px;
+        margin-bottom: 30px;
+        border: 1px solid lightgray;
+        border-radius: 250px;
+        color: white;
+        background-color: $primary;
+        font-weight: 600;
+        font-size: 0.9rem;
+        &__menu {
+            width: 170px;
+            margin: 30px auto;
+        }
 }
