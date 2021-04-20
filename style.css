@@ -104,20 +104,19 @@ body, h1, h2 {
 .intro__title {
   text-align: center;
   width: 70%;
-  padding-top: 15px;
+  padding-top: 25px;
 }
 .intro__description {
   text-align: center;
   width: 80%;
+  padding-bottom: 20px;
 }
-.intro__btn {
-  height: 45px;
-  width: 200px;
-  margin-bottom: 30px;
-  border: 1px solid lightgray;
-  border-radius: 250px;
-  color: white;
-  background-color: #9356DC;
+@media screen and (min-width: 813px) {
+  .intro {
+    width: 70%;
+    margin: 20px auto;
+    border-radius: 10px;
+  }
 }
 @media screen and (min-width: 813px) {
   .intro {
