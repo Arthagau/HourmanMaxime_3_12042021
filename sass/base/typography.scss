@@ -20,6 +20,9 @@ body, h1, h2 {
 .intro, .fct__list, .rst, .menu {
     background-color: $bgcolor;
 }
+.btn a {
+    color: white;
+}
 .rst {
     &__body {
     font-size: 0.9rem;}

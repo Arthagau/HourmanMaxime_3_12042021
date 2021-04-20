@@ -1,10 +1,9 @@
 .background {
-    height: 250px;
-    width: 100%;
+    height: 30vh;
     display: flex;
     &__image {
-        height: 120%;
-        width: 100%;
+        height: 35vh;
+        width: 100vw;
         z-index: -2;
         &__width {
             height: 200%;
@@ -22,11 +21,14 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: 35px 15px 15px 15px;
+        padding: 8% 5% 3% 5%;
     }
 }
 .menu__list {
     margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     & h2 {
         border-bottom: 3px solid $tertiary;
         width: 45px;
@@ -54,4 +56,60 @@
      &__price {
          padding: 25px 20px 0 0;
      }
+}
+@include phone {
+    .background {
+        height: 180px;
+        &__image {
+            height: 180%;
+            &__width {
+                height: 350%;
+            }
+        }
+    }
+    .menu__list {
+        width: 80vw;
+        height: 400px;
+    }
+    .list__dishes {
+        width: 85%;
+        height: 22%;
+    }
+} 
+@include tablets {
+    .background {
+        height: 300px;
+        &__image__width {
+            height: 350%;
+        }
+    }
+    .menu h2 {
+        font-size: 1.2rem;
+    }
+    .menu__title {
+        font-size: 1.3rem;
+        padding: 3% 9% ;
+    }
+    .menu__list {
+        height: 470px;
+    }
+    .list__dishes {
+        font-size: 1rem;
+        height: 12vh;
+        &__description {
+            height: 7vh;
+            padding: 1vh 2vw;
+        }
+        &__price {
+            padding-top: 6vh;
+        }
+    }
+}
+@include laptop {
+    .background {
+        height: 35vh;
+    }
+    .menu__list {
+        margin: 0 auto 35px auto;
+    }
 }
