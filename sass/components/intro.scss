@@ -19,7 +19,15 @@
         margin: 20px auto;
         border-radius: 10px;
     }
+<<<<<<< HEAD
 }
 .intro__btn {
     margin-bottom: 30px;
+=======
+    @include tablets {
+        width: 70%;
+        margin: 20px auto;
+        border-radius: 10px;
+    }
+>>>>>>> accueil
 }
