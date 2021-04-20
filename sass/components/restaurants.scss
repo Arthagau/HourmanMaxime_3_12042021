@@ -4,6 +4,16 @@
     flex-direction: column;
     &__title {
         padding: 60px 0 10px 25px;
+        @include tablets {
+            width: 100%;
+            height: 60px;
+            padding: 25px;
+        }
+    }
+    @include phone {
+        width: 80%;
+        margin: 0 auto 25px auto;
+        border-radius: 15px;
     }
     &__body {
         margin: 10px auto;
@@ -38,6 +48,26 @@
             top: 13px;
         } 
       }
+      @include tablets {
+          width: 75%;
+          height: 700px;
+          margin: 20px auto;
+          border-radius: 15px;
+          flex-direction: row;
+          flex-wrap: wrap;
+      }
+      @include laptop {
+        width: 80vw;
+        height: 100vh;
+        margin: 20px auto;
+        border-radius: 15px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        &__body {
+            width: 30vw;
+            height: 37vh;
+        }
+    }
 }
 .rst__descr {
     position: absolute;
@@ -51,7 +81,7 @@
     border-radius: 0 0 10px 10px;
     &__text {
         padding-left: 15px;
-        height: 50px;
+        height: 70%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;

@@ -22,4 +22,9 @@
         color: white;
         background-color: $primary;
     }
+    @include tablets {
+        width: 70%;
+        margin: 20px auto;
+        border-radius: 10px;
+    }
 }
