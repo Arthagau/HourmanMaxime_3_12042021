@@ -15,19 +15,16 @@
         padding-bottom: 20px;
     }
     @include tablets {
-        width: 70%;
+        width: 85%;
+        height: 400px;
         margin: 20px auto;
         border-radius: 10px;
+        &__title {
+            font-size: 2.3rem;
+        }
+        &__description {
+            font-size: 1.7rem;
+            width: 70%;
+        }
     }
-<<<<<<< HEAD
-}
-.intro__btn {
-    margin-bottom: 30px;
-=======
-    @include tablets {
-        width: 70%;
-        margin: 20px auto;
-        border-radius: 10px;
-    }
->>>>>>> accueil
 }

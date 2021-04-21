@@ -3,17 +3,8 @@
     display: flex;
     flex-direction: column;
     &__title {
-        padding: 60px 0 10px 25px;
-        @include tablets {
-            width: 100%;
-            height: 60px;
-            padding: 25px;
-        }
-    }
-    @include phone {
-        width: 80%;
-        margin: 0 auto 25px auto;
-        border-radius: 15px;
+        padding: 1em 0 0.5em 1em;
+        font-size: 2rem;
     }
     &__body {
         margin: 10px auto;
@@ -48,26 +39,6 @@
             top: 13px;
         } 
       }
-      @include tablets {
-          width: 75%;
-          height: 700px;
-          margin: 20px auto;
-          border-radius: 15px;
-          flex-direction: row;
-          flex-wrap: wrap;
-      }
-      @include laptop {
-        width: 80vw;
-        height: 100vh;
-        margin: 20px auto;
-        border-radius: 15px;
-        flex-direction: row;
-        flex-wrap: wrap;
-        &__body {
-            width: 30vw;
-            height: 37vh;
-        }
-    }
 }
 .rst__descr {
     position: absolute;
@@ -88,6 +59,35 @@
       }
     &__like {
         padding-right: 15px;
+        font-size: 1.5rem;
+    }
+}
+@include phone {
+    .rst {
+    width: 90%;
+    height: 1500px;
+    margin: 0 auto 25px auto;
+    border-radius: 15px;
+    &__body {
+        width: 80%;
+        height: 40%;
+    }
+} }
+@include tablets {
+    .rst {
+    height: 350vh;
+    margin: 20px auto;
+    border-radius: 15px;
+    &__title {
+        font-size: 2rem;
+    }
+    &__body {
+        width: 80%;
+        height: 60%;
+    }
+    }
+    .rst__descr {
+        height: 20%;
         font-size: 1.5rem;
     }
 }

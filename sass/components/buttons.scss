@@ -13,3 +13,10 @@
             margin: 30px auto;
         }
 }
+@include tablets {
+    .btn {
+        width: 300px;
+        height: 80px;
+        font-size: 1.2rem;
+    }
+}
