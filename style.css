@@ -362,6 +362,10 @@ body, h1, h2 {
     height: 20%;
     font-size: 1.5rem;
   }
+
+  .rst__descr i {
+    transform: scale(150%);
+  }
 }
 .background {
   height: 30vh;
@@ -393,9 +397,8 @@ body, h1, h2 {
 
 .menu__list {
   margin: 0 auto;
-  display: flex;
-  justify-content: center;
   flex-direction: column;
+  width: 93%;
 }
 .menu__list h2 {
   border-bottom: 3px solid #99E2D0;
@@ -408,7 +411,7 @@ body, h1, h2 {
 .list__dishes {
   background-color: white;
   border-radius: 15px;
-  width: 330px;
+  width: 95%;
   height: 65px;
   margin-bottom: 15px;
   display: flex;
@@ -437,14 +440,21 @@ body, h1, h2 {
     height: 350%;
   }
 
-  .menu__list {
-    width: 80vw;
-    height: 400px;
+  .menu__title {
+    font-size: 1.3rem;
+  }
+
+  .menu__title i {
+    transform: scale(150%);
+  }
+
+  .menu h2 {
+    font-size: 1.4rem;
   }
 
   .list__dishes {
-    width: 85%;
-    height: 22%;
+    height: 100px;
+    font-size: 1.1rem;
   }
 }
 @media screen and (min-width: 813px) {
@@ -455,25 +465,21 @@ body, h1, h2 {
     height: 350%;
   }
 
-  .menu h2 {
-    font-size: 1.2rem;
-  }
-
   .menu__title {
-    font-size: 1.3rem;
-    padding: 3% 9%;
+    font-size: 1.8rem;
+    padding: 3% 7%;
   }
 
-  .menu__list {
-    height: 470px;
+  .menu__title i {
+    transform: scale(180%);
   }
 
   .list__dishes {
-    font-size: 1rem;
-    height: 12vh;
+    font-size: 1.3rem;
+    height: 17vh;
   }
   .list__dishes__description {
-    height: 7vh;
+    height: 8vh;
     padding: 1vh 2vw;
   }
   .list__dishes__price {
@@ -486,7 +492,11 @@ body, h1, h2 {
   }
 
   .menu__list {
-    margin: 0 auto 35px auto;
+    margin-bottom: 2rem;
+  }
+
+  .menu__title i {
+    transform: scale(200%);
   }
 }
 .btn {
@@ -496,7 +506,7 @@ body, h1, h2 {
   border: 1px solid lightgray;
   border-radius: 250px;
   color: white;
-  background-color: #9356DC;
+  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 80%);
   font-weight: 600;
   font-size: 0.9rem;
 }

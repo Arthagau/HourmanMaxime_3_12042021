@@ -5,7 +5,7 @@
         border: 1px solid lightgray;
         border-radius: 250px;
         color: white;
-        background-color: $primary;
+        background: linear-gradient(0deg,$primary 0%, $secondary 80%);
         font-weight: 600;
         font-size: 0.9rem;
         &__menu {
