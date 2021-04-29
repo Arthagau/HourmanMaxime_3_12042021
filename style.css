@@ -6,6 +6,10 @@
   list-style-type: none;
 }
 
+body {
+  z-index: 1;
+}
+
 body, h1, h2 {
   font-family: "Roboto", sans-serif;
 }
@@ -57,6 +61,137 @@ body, h1, h2 {
   color: white;
 }
 
+/*-----------------------------Animation du Loader--------------------------------*/
+#loader {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  animation: FadeOut 3000ms;
+}
+
+#loader-spin {
+  width: 100px;
+  height: 100px;
+  border-top: 10px solid #9356DC;
+  border-bottom: 10px solid #FF79DA;
+  border-radius: 80px;
+  animation: spin 1500ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.9;
+    z-index: 5;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+    z-index: -1;
+  }
+}
+@keyframes FadeOut {
+  0% {
+    background-color: rgba(211, 211, 211, 0.99);
+    z-index: 5;
+  }
+  100% {
+    background-color: rgba(211, 211, 211, 0);
+    z-index: -1;
+  }
+}
+/*--------------------------Animation des boutons like---------------------------*/
+.like-btn {
+  text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+  color: white;
+  transform: scale(170%);
+  width: 15px;
+  height: 15px;
+  padding: 2% 4% 0 0;
+  position: relative;
+}
+
+.like-btn:hover {
+  color: #FF79DA;
+  animation: fill 0.8s forwards 0s;
+  transform: scaleY(1), scale(150%);
+}
+
+@keyframes fill {
+  0% {
+    color: white;
+  }
+  100% {
+    color: #FF79DA;
+    text-shadow: -1px 0 #FF79DA, 0 1px #FF79DA, 1px 0 #FF79DA, 0 -1px #FF79DA;
+  }
+}
+/*------------------------Animation FadeIn des menus-----------------------*/
+.menu__list {
+  animation: fadeUp 1s linear 0s;
+}
+.menu__list--1 {
+  animation-delay: 0.5s;
+}
+.menu__list--2 {
+  animation-delay: 1s;
+}
+.menu__list--3 {
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  100% {
+    transform: none;
+  }
+}
+/*-----------------------Animation Sauvegarde des plats-------------------------*/
+.list__dishes:hover {
+  cursor: pointer;
+}
+.list__dishes:hover .list__dishes__description {
+  width: 60%;
+}
+.list__dishes:hover .list__dishes__price {
+  padding: 25px 0 0 5px;
+  animation: SlideIn 0.4s ease-in-out 0s;
+}
+.list__dishes:hover .list__dishes__save {
+  display: flex;
+  width: 20%;
+  position: relative;
+  animation: SlideIn 0.4s ease-in-out 0s;
+}
+.list__dishes:hover .list__dishes__save i {
+  animation: rotate 0.8s forwards 0s;
+}
+
+@keyframes rotate {
+  0% {
+    transform-origin: center;
+    transform: rotate3d(0, 0, 1, -200deg);
+  }
+  100% {
+    transform-origin: center;
+    transform: none;
+  }
+}
+@keyframes SlideIn {
+  0% {
+    transform: translate3d(50px, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
 .header {
   height: 55px;
   margin-bottom: 2px;
@@ -200,8 +335,8 @@ body, h1, h2 {
   align-items: center;
   justify-content: space-around;
   margin: 10px 0;
-  border-radius: 15px;
-  height: 65px;
+  border-radius: 25px;
+  height: 70px;
   width: 100%;
   position: relative;
 }
@@ -266,6 +401,13 @@ body, h1, h2 {
   }
 }
 
+.fct__list--active {
+  background: #ece1f9;
+}
+.fct__list--active i {
+  color: #9356DC;
+}
+
 .rst {
   height: 1230px;
   display: flex;
@@ -326,10 +468,6 @@ body, h1, h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-}
-.rst__descr__like {
-  padding-right: 15px;
-  font-size: 1.5rem;
 }
 
 @media screen and (min-width: 650px) {
@@ -410,6 +548,7 @@ body, h1, h2 {
 
 .list__dishes {
   background-color: white;
+  position: relative;
   border-radius: 15px;
   width: 95%;
   height: 65px;
@@ -417,16 +556,45 @@ body, h1, h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  overflow: hidden;
 }
 .list__dishes__description {
   padding-left: 10px;
-  height: 40px;
+  height: 70%;
+  width: 78%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+.list__dishes__description p {
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+.list__dishes__description h3 {
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
 .list__dishes__price {
   padding: 25px 20px 0 0;
+}
+.list__dishes__save {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 23%;
+  height: 100%;
+  background-color: #99E2D0;
+  border-radius: 0 15px 15px 0;
+}
+.list__dishes__save i {
+  color: white;
+  font-size: 180%;
 }
 
 @media screen and (min-width: 650px) {
@@ -506,13 +674,22 @@ body, h1, h2 {
   border: 1px solid lightgray;
   border-radius: 250px;
   color: white;
-  background: linear-gradient(0deg, #9356DC 0%, #FF79DA 80%);
+  background: linear-gradient(350deg, #9356DC 0%, #FF79DA 80%);
   font-weight: 600;
   font-size: 0.9rem;
+  z-index: 1;
 }
 .btn__menu {
   width: 170px;
   margin: 30px auto;
+}
+.btn:hover {
+  filter: brightness(110%);
+  transition: 0.3s;
+  color: #e6e6e6;
+  box-shadow: 0px 2px 15px 0px rgba(100, 100, 100, 0.548);
+  animation-timing-function: ease-in-out;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 813px) {

@@ -14,8 +14,8 @@
         align-items: center;
         justify-content: space-around;
         margin: 10px 0;
-        border-radius: 15px;
-        height: 65px;
+        border-radius: 25px;
+        height: 70px;
         width: 100%;
         position: relative;
         &__number {
@@ -75,4 +75,10 @@
             }
             }
         }   
+}
+.fct__list--active {
+    background: lighten($color: $primary, $amount: 33%);
+    & i {
+        color: $primary;
+    }
 }
