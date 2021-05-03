@@ -8,11 +8,11 @@ body {
     z-index: 1
 }
 @import "./sass/base/typography.scss";
+@import "./sass/utils/mixins.scss";
 @import "./sass/base/responsive.scss";
 @import "./sass/base/animations.scss";
 @import "./sass/layouts/header_footer";
-@import "./sass/components/localisation.scss";
-@import "./sass/components/intro.scss";
+@import "./sass/components/intro&loc.scss";
 @import "./sass/components/process.scss";
 @import "./sass/components/restaurants.scss";
 @import "./sass/layouts/carte.scss";

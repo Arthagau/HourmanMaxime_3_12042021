@@ -1,14 +1,14 @@
+/*---------------- HEADER ---------------*/
+
 .header {
-    height: 55px;
-    margin-bottom: 2px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 2px solid #afafaf94;
-    box-shadow: 0px 0px 50px 15px #18181857;
-    &__logo {
-      transform: scale(80%);
-      padding-top: 10px;
+  @include FlexCenter;
+  height: 55px;
+  margin-bottom: 2px;
+  border-bottom: 2px solid #afafaf94;
+  box-shadow: 0px 0px 50px 15px #18181857;
+  &__logo {
+    transform: scale(80%);
+    padding-top: 10px;
     }
     &__return {
       transform: scale(110%);
@@ -32,6 +32,9 @@
     right: 35%;
   }
 }
+
+/*---------------- FOOTER --------------------*/
+
 .footer {
   background-color: #353535;
   width: 100%;

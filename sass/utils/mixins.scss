@@ -1,0 +1,31 @@
+@mixin FlexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+};
+
+@mixin FlexCentBetween {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+};
+
+@mixin FlexColAround {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+};
+
+@mixin FlexColBetween {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+@mixin TextEllipsis {
+    display: inline-block;
+    text-overflow: ellipsis ;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+};

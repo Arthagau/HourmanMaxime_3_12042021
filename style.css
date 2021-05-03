@@ -10,14 +10,7 @@ body {
   z-index: 1;
 }
 
-body, h1, h2 {
-  font-family: "Roboto", sans-serif;
-}
-
-.header__logo, .menu h1 {
-  font-family: "Shrikhand", sans-serif;
-}
-
+/*---------- Site colors ----------*/
 .loc i, .header__return {
   color: #353535;
 }
@@ -26,42 +19,43 @@ body, h1, h2 {
   color: #7e7e7e;
 }
 
-.intro, .fct__list, .rst, .menu {
-  background-color: #f6f6f6;
-}
-
-.btn a {
+.footer a, .btn a {
   color: white;
 }
 
-.rst__body {
-  font-size: 0.9rem;
-}
 .rst__descr {
   color: black;
 }
+
 .rst__body--new {
   background-color: #99E2D0;
   color: #2b987d;
 }
 
-.menu {
-  font-size: 0.8em;
+.intro, .fct__list, .rst, .menu {
+  background-color: #f6f6f6;
 }
+
+/*---------------- Site typo ---------------*/
+body, h1, h2 {
+  font-family: "Roboto", sans-serif;
+}
+
+.header__logo, .menu h1 {
+  font-family: "Shrikhand", sans-serif;
+}
+
+.rst__body, .menu, .footer, .btn {
+  font-size: 0.9rem;
+}
+
 .menu h2 {
   text-transform: uppercase;
-  font-size: 1.3em;
+  font-size: 1.3rem;
   font-weight: 300;
 }
 
-.footer {
-  font-size: 0.9em;
-}
-.footer a {
-  color: white;
-}
-
-/*-----------------------------Animation du Loader--------------------------------*/
+/*----------------------------- Loader animation --------------------------------*/
 #loader {
   width: 100%;
   height: 100%;
@@ -104,7 +98,7 @@ body, h1, h2 {
     z-index: -1;
   }
 }
-/*--------------------------Animation des boutons like---------------------------*/
+/*-------------------------- Like buttons animation ---------------------------*/
 .like-btn {
   text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
   color: white;
@@ -130,7 +124,7 @@ body, h1, h2 {
     text-shadow: -1px 0 #FF79DA, 0 1px #FF79DA, 1px 0 #FF79DA, 0 -1px #FF79DA;
   }
 }
-/*------------------------Animation FadeIn des menus-----------------------*/
+/*------------------------ Menu FadeIn animation -----------------------*/
 .menu__list {
   animation: fadeUp 1s linear 0s;
 }
@@ -153,7 +147,7 @@ body, h1, h2 {
     transform: none;
   }
 }
-/*-----------------------Animation Sauvegarde des plats-------------------------*/
+/*----------------------- Save plates animation -------------------------*/
 .list__dishes:hover {
   cursor: pointer;
 }
@@ -186,18 +180,19 @@ body, h1, h2 {
 }
 @keyframes SlideIn {
   0% {
-    transform: translate3d(50px, 0, 0);
+    transform: translate3d(100%, 0, 0);
   }
   100% {
     transform: translate3d(0, 0, 0);
   }
 }
+/*---------------- HEADER ---------------*/
 .header {
-  height: 55px;
-  margin-bottom: 2px;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 55px;
+  margin-bottom: 2px;
   border-bottom: 2px solid #afafaf94;
   box-shadow: 0px 0px 50px 15px #18181857;
 }
@@ -227,6 +222,7 @@ body, h1, h2 {
     right: 35%;
   }
 }
+/*---------------- FOOTER --------------------*/
 .footer {
   background-color: #353535;
   width: 100%;
@@ -271,35 +267,36 @@ body, h1, h2 {
     width: 40%;
   }
 }
+/*--------------LOCALISATION----------------*/
 .loc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 50px;
   background-color: #eaeaea;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .loc__town {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 140px;
   padding-right: 30px;
 }
 
+/*------------------INTRODUCTION-------------------*/
 .intro {
-  height: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  height: 300px;
   align-items: center;
 }
-.intro__title {
+.intro__title, .intro__description {
   text-align: center;
-  width: 70%;
+  width: 78%;
   padding-top: 25px;
 }
 .intro__description {
-  text-align: center;
-  width: 80%;
   padding-bottom: 20px;
 }
 @media screen and (min-width: 813px) {
@@ -318,22 +315,23 @@ body, h1, h2 {
   }
 }
 
+/*-------------------- PROCESS BLOCK -------------------*/
 .fct {
-  height: 350px;
-  width: 80%;
-  padding-top: 60px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  height: 350px;
+  width: 80%;
+  padding-top: 60px;
 }
 .fct__title {
   padding-bottom: 15px;
 }
 .fct__list {
-  box-shadow: 0px 2px 4px 0px rgba(214, 207, 207, 0.75);
   display: flex;
   align-items: center;
   justify-content: space-around;
+  box-shadow: 0px 2px 4px 0px rgba(214, 207, 207, 0.75);
   margin: 10px 0;
   border-radius: 25px;
   height: 70px;
@@ -341,20 +339,21 @@ body, h1, h2 {
   position: relative;
 }
 .fct__list__number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 20px;
   color: white;
   background-color: #9356DC;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 23px;
   height: 23px;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   position: absolute;
   left: -10px;
 }
 .fct__list__descr {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   width: 215px;
   padding-right: 10%;
@@ -371,7 +370,6 @@ body, h1, h2 {
     width: 30px;
     height: 30px;
     left: -15px;
-    font-size: 1.1rem;
   }
   .fct__list__descr {
     width: 50%;
@@ -396,28 +394,31 @@ body, h1, h2 {
   .fct__list__number {
     width: 40px;
     height: 40px;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     left: -20px;
   }
 }
 
 .fct__list--active {
+  /*  Colored item in process list */
   background: #ece1f9;
 }
 .fct__list--active i {
   color: #9356DC;
 }
 
+/*-------------------------RESTAURANTS BLOCK--------------------*/
 .rst {
-  height: 1230px;
   display: flex;
   flex-direction: column;
+  height: 1230px;
 }
 .rst__title {
   padding: 1em 0 0.5em 1em;
   font-size: 2rem;
 }
 .rst__body {
+  /* Restaurants cards */
   margin: 10px auto;
   border-radius: 10px;
   box-shadow: 0px 0px 5px -1px rgba(8, 7, 7, 0.281);
@@ -439,6 +440,7 @@ body, h1, h2 {
   top: -150px;
 }
 .rst__body--new {
+  /* Add a 'new' icon on cards */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -452,22 +454,23 @@ body, h1, h2 {
 }
 
 .rst__descr {
+  /* Description for cards restaurant */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: absolute;
   bottom: 0px;
   background-color: white;
   width: 100%;
   height: 30%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   border-radius: 0 0 10px 10px;
 }
 .rst__descr__text {
-  padding-left: 15px;
-  height: 70%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+  padding-left: 15px;
+  height: 70%;
 }
 
 @media screen and (min-width: 650px) {
@@ -505,7 +508,9 @@ body, h1, h2 {
     transform: scale(150%);
   }
 }
+/*----------------- RESTAURANTS PAGE ----------------------*/
 .background {
+  /* Background image on menu pages */
   height: 30vh;
   display: flex;
 }
@@ -515,10 +520,12 @@ body, h1, h2 {
   z-index: -2;
 }
 .background__image__width {
+  /* Precision for wider image */
   height: 200%;
 }
 
 .menu {
+  /* Menu block with 3 lists */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -547,33 +554,26 @@ body, h1, h2 {
 }
 
 .list__dishes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: white;
   position: relative;
   border-radius: 15px;
   width: 95%;
   height: 65px;
   margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   overflow: hidden;
 }
 .list__dishes__description {
-  padding-left: 10px;
-  height: 70%;
-  width: 78%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-left: 10px;
+  height: 70%;
+  width: 78%;
 }
-.list__dishes__description p {
-  display: inline-block;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
-}
-.list__dishes__description h3 {
+.list__dishes__description p, .list__dishes__description h3 {
   display: inline-block;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -584,6 +584,7 @@ body, h1, h2 {
   padding: 25px 20px 0 0;
 }
 .list__dishes__save {
+  /* checkbox for the saving animation */
   display: none;
   justify-content: center;
   align-items: center;
@@ -667,6 +668,7 @@ body, h1, h2 {
     transform: scale(200%);
   }
 }
+/*--------------------BOUTONS------------------*/
 .btn {
   height: 50px;
   width: 210px;
@@ -676,7 +678,6 @@ body, h1, h2 {
   color: white;
   background: linear-gradient(350deg, #9356DC 0%, #FF79DA 80%);
   font-weight: 600;
-  font-size: 0.9rem;
   z-index: 1;
 }
 .btn__menu {
@@ -696,7 +697,7 @@ body, h1, h2 {
   .btn {
     width: 300px;
     height: 80px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 }
 

@@ -1,39 +1,37 @@
+/*-------------------- PROCESS BLOCK -------------------*/
 .fct {
-    height: 350px;
-    width: 80%;
-    padding-top: 60px;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    height: 350px;
+    width: 80%;
+    padding-top: 60px;
     &__title {
         padding-bottom: 15px;
     }
     &__list {
-        box-shadow: 0px 2px 4px 0px rgba(214, 207, 207, 0.75);
         display: flex;
         align-items: center;
         justify-content: space-around;
+        box-shadow: 0px 2px 4px 0px rgba(214, 207, 207, 0.75);
         margin: 10px 0;
         border-radius: 25px;
         height: 70px;
         width: 100%;
         position: relative;
         &__number {
+            @include FlexCenter;
             border-radius: 20px;
             color: white;
             background-color: $primary;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             width: 23px;
             height: 23px;
-            font-size: 0.8rem;
+            font-size: $small;
             position: absolute;
             left: -10px;
         }
         &__descr {
-            display: flex;
-            justify-content: space-between;
+            @include FlexCentBetween;
             width: 215px;
             padding-right: 10%;
         }
@@ -47,19 +45,18 @@
                 width: 30px;
                 height: 30px;
                 left: -15px;
-                font-size: 1.1rem;
                 }
             &__descr {
                 width: 50%;
                 padding-right: 20%;
-                font-size: 1.3rem;
+                font-size: $medium;
                 }
         } 
     }
     @include tablets {
         height: 600px;
         &__title {
-            font-size: 2rem;
+            font-size: $large;
         }
         &__list {
             height: 130px;
@@ -70,13 +67,13 @@
             &__number {
                 width: 40px;
                 height: 40px;
-                font-size: 1.4rem;
+                font-size: $medium;
                 left: -20px;
             }
             }
         }   
 }
-.fct__list--active {
+.fct__list--active {  /*  Colored item in process list */
     background: lighten($color: $primary, $amount: 33%);
     & i {
         color: $primary;

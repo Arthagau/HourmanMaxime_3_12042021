@@ -1,17 +1,26 @@
+/*--------------LOCALISATION----------------*/
+.loc {
+    @include FlexCenter;
+    height: 50px;
+    background-color: #eaeaea;
+    &__town {
+       @include FlexCentBetween;
+        width: 140px;
+        padding-right: 30px;
+    }
+}
+
+/*------------------INTRODUCTION-------------------*/
 .intro {
+    @include FlexColAround;
     height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
     align-items: center;
-    &__title {
+    &__title, &__description {
         text-align: center;
-        width: 70%;
+        width: 78%;
         padding-top: 25px;
     }
     &__description {
-        text-align: center;
-        width: 80%;
         padding-bottom: 20px;
     }
     @include tablets {
