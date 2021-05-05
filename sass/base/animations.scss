@@ -1,11 +1,11 @@
 /*----------------------------- Loader animation --------------------------------*/
 
 #loader {
+    @include FlexCenter;
     width: 100%;
     height: 100%;
-    @include FlexCenter;
     position: absolute;
-    animation: FadeOut 3000ms;
+    animation: FadeOut 2800ms;
 }
  #loader-spin{
     width: 100px;
@@ -13,7 +13,7 @@
     border-top: 10px solid $primary;
     border-bottom: 10px solid $secondary;
     border-radius: 80px;
-    animation: spin 1500ms;
+    animation: spin 1800ms;
     animation-fill-mode: forwards;
     }
 
@@ -42,28 +42,47 @@
 
 /*-------------------------- Like buttons animation ---------------------------*/
 
-.like-btn {
-    text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
-    color: rgb(255, 255, 255);
-    transform: scale(170%);
-    width: 15px;
-    height: 15px;
-    padding: 2% 4% 0 0;
-    position: relative;
-}
-.like-btn:hover {
-    color: $secondary;
-    animation: fill 0.8s forwards 0s ;
-    transform: scaleY(1), scale(150%);
+.menu_icon {
+    @include FlexCenter;
 }
 
-@keyframes fill {
-    0% {
-        color: white;
-    }
-    100% {
-        color: $secondary;
-        text-shadow: -1px 0 $secondary, 0 1px $secondary, 1px 0 $secondary, 0 -1px $secondary;
+.fill-btn {
+    overflow: hidden;
+    position: relative;
+    clip-path: url(#menu_icon-svg-path);
+    height: 90px;
+    width: 90px;
+    transform: scale(0.35);
+}
+
+#fill-btn-path,
+#fill-btn-path-1,
+#fill-btn-path-2,
+#fill-btn-path-3,
+#fill-btn-path-4 {
+    fill: none;
+    stroke: black;
+    stroke-width: 0.5rem;
+}
+
+.radientBg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    opacity: 1;
+    background: $gradient-color;
+    transform: translateY(100px);
+    transition: transform 0.7s ease-out;
+}
+
+.fill-btn:hover .radientBg {
+    transform: translateY(0);
+}
+
+@include tablets {
+    .fill-btn {
+        transform: scale(0.50);
     }
 }
 

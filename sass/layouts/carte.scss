@@ -21,7 +21,10 @@
     padding-bottom: 50px;
     &__title {
        @include FlexCentBetween;
-        padding: 8% 5% 3% 5%;
+        padding: 4% 5% 3% 5%;
+        & h1 {
+            font-size: 1.5rem;
+        }
     }
 }
 .menu__list { 
@@ -81,11 +84,8 @@
             }
         }
     }
-    .menu__title {
-        font-size: 1.3rem;
-    }
-    .menu__title i {
-            transform: scale(150%);
+    .menu__title h1 {
+        font-size: $large;
     }
     .menu h2 {
         font-size: 1.4rem;

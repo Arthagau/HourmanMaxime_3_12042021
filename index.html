@@ -13,9 +13,11 @@
     />
   </head>
   <body>
+  <!------------------- LOADER -------------------> 
     <div id="loader">
       <div id="loader-spin"></div>
     </div>
+  <!------------------- HEADER ------------------->
     <header class="header">
       <img
         class="header__logo"
@@ -23,12 +25,14 @@
         alt="LogoOhmyfood"
       />
     </header>
+  <!------------------- LOCALISATION ------------------->
     <aside class="loc">
       <div class="loc__town">
       <i class="fas fa-map-marker-alt"></i>
       <p>Paris, Belleville</p>
     </div>
     </aside>
+  <!------------------- INTRODUCTION ------------------->
     <section class="intro">
       <h1 class="intro__title">Réservez le menu qui vous convient</h1>
       <p class="intro__description">
@@ -37,6 +41,7 @@
       <button class="btn intro__btn">Explorer nos restaurants</button>
     </section>
     <main>
+  <!------------------- PROCESS ------------------->
       <section class="fct">
         <h2 class="fct__title">Fonctionnement</h2>
         <div class="fct__list">
@@ -61,6 +66,7 @@
           </div>
         </div>
       </section>
+  <!------------------- RESTAURANTS BLOCK ------------------->
       <section class="rst">
         <h2 class="rst__title">Restaurants</h2>
         <div class="rst__body">
@@ -72,9 +78,29 @@
               <h3>La palette du goût</h3>
               <p>Ménilmontant</p>
             </div>
-            <i class="fas fa-heart like-btn">
-              <div class="btn-fill"></div>
-            </i>
+            <!--------------------- Heart icon ---------------------->
+            <svg  width="0" height="0"> 
+              <clipPath id="menu_icon-svg-path">
+                <path
+                  d="M80.2,55.9L52.3,83.3c-0.5,0.5-1.3,0.8-2,0.8s-1.4-0.3-2-0.8L20.5,55.8c-0.4-0.3-10.2-9.5-10.2-20.5
+                c0-13.4,8-21.4,21.4-21.4c7.8,0,15.2,6.3,18.7,9.9c3.5-3.6,10.9-9.9,18.7-9.9c13.4,0,21.4,8,21.4,21.4
+                C90.5,46.3,80.7,55.5,80.2,55.9z "
+                />
+              </clipPath>
+            </svg>
+            <div class="menu_icon">
+              <div class="fill-btn">
+                <svg>
+                  <path
+                    id="fill-btn-path-1"
+                    d="M80.2,55.9L52.3,83.3c-0.5,0.5-1.3,0.8-2,0.8s-1.4-0.3-2-0.8L20.5,55.8c-0.4-0.3-10.2-9.5-10.2-20.5
+                c0-13.4,8-21.4,21.4-21.4c7.8,0,15.2,6.3,18.7,9.9c3.5-3.6,10.9-9.9,18.7-9.9c13.4,0,21.4,8,21.4,21.4
+                C90.5,46.3,80.7,55.5,80.2,55.9z "
+                  ></path>
+                </svg>
+                <div class="radientBg"></div>
+              </div>
+            </div>
           </div>
         </a>
         </div>
@@ -87,9 +113,19 @@
               <h3>La note enchantée</h3>
               <p>Charonne</p>
             </div>
-            <i class="fas fa-heart like-btn">
-              <div class="btn-fill"></div>
-            </i>
+            <div class="menu_icon">
+              <div class="fill-btn">
+                <svg>
+                  <path
+                    id="fill-btn-path-2"
+                    d="M80.2,55.9L52.3,83.3c-0.5,0.5-1.3,0.8-2,0.8s-1.4-0.3-2-0.8L20.5,55.8c-0.4-0.3-10.2-9.5-10.2-20.5
+                c0-13.4,8-21.4,21.4-21.4c7.8,0,15.2,6.3,18.7,9.9c3.5-3.6,10.9-9.9,18.7-9.9c13.4,0,21.4,8,21.4,21.4
+                C90.5,46.3,80.7,55.5,80.2,55.9z "
+                  ></path>
+                </svg>
+                <div class="radientBg"></div>
+              </div>
+            </div>
           </div>
         </a>
         </div>
@@ -101,9 +137,19 @@
               <h3>À la française</h3>
               <p>Cité Rouge</p>
             </div>
-            <i class="fas fa-heart like-btn">
-              <div class="btn-fill"></div>
-            </i>
+            <div class="menu_icon">
+              <div class="fill-btn">
+                <svg>
+                  <path
+                    id="fill-btn-path-3"
+                    d="M80.2,55.9L52.3,83.3c-0.5,0.5-1.3,0.8-2,0.8s-1.4-0.3-2-0.8L20.5,55.8c-0.4-0.3-10.2-9.5-10.2-20.5
+                c0-13.4,8-21.4,21.4-21.4c7.8,0,15.2,6.3,18.7,9.9c3.5-3.6,10.9-9.9,18.7-9.9c13.4,0,21.4,8,21.4,21.4
+                C90.5,46.3,80.7,55.5,80.2,55.9z "
+                  ></path>
+                </svg>
+                <div class="radientBg"></div>
+              </div>
+            </div>
           </div>
         </a>
         </div>
@@ -115,14 +161,25 @@
               <h3>Le délice des sens</h3>
               <p>Folie-Méricourt</p>
             </div>
-            <i class="fas fa-heart like-btn">
-              <div class="btn-fill"></div>
-            </i>
+            <div class="menu_icon">
+              <div class="fill-btn">
+                <svg>
+                  <path
+                    id="fill-btn-path-4"
+                    d="M80.2,55.9L52.3,83.3c-0.5,0.5-1.3,0.8-2,0.8s-1.4-0.3-2-0.8L20.5,55.8c-0.4-0.3-10.2-9.5-10.2-20.5
+                c0-13.4,8-21.4,21.4-21.4c7.8,0,15.2,6.3,18.7,9.9c3.5-3.6,10.9-9.9,18.7-9.9c13.4,0,21.4,8,21.4,21.4
+                C90.5,46.3,80.7,55.5,80.2,55.9z "
+                  ></path>
+                </svg>
+                <div class="radientBg"></div>
+              </div>
+            </div>
           </div>
         </a>
         </div>
       </section>
     </main>
+  <!------------------- FOOTER ------------------->
     <footer class="footer">
       <img
       class="footer__logo"
