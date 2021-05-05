@@ -525,6 +525,11 @@ body, h1, h2 {
     width: 80%;
     height: 60%;
   }
+  .rst__body--new {
+    width: 18%;
+    height: 8%;
+    font-size: 1.3rem;
+  }
 
   .rst__descr {
     height: 20%;
