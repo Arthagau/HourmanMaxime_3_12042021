@@ -9,7 +9,11 @@
     align-items: center;
     justify-content: space-between;
 };
-
+@mixin FlexCentAround {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
 @mixin FlexColAround {
     display: flex;
     flex-direction: column;
