@@ -6,12 +6,12 @@
     &__title {
         padding: 1em 0 0.5em 1em;
         font-size: $large;
-        width: 100%;
+        width: 80%;
     }
     &__body { /* Restaurants cards */
+        @include BoxShadow;
         margin: 10px auto;
         border-radius: 10px;
-        box-shadow: 0px 0px 5px -1px rgba(8, 7, 7, 0.281);
         height: 250px;
         width: 330px;
         position: relative;
@@ -64,15 +64,15 @@
         width: 80%;
         height: 40%;
     }
+    &__descr {
+        font-size: 1.2rem;
+    }
 } }
 @include tablets {
     .rst {
     height: 350vh;
     margin: 20px auto;
     border-radius: 15px;
-    &__title {
-        font-size: 2rem;
-    }
     &__body {
         width: 80%;
         height: 60%;
@@ -85,7 +85,7 @@
     }
     .rst__descr {
         height: 20%;
-        font-size: 1.5rem;
+        font-size: $medium;
     }
     .rst__descr i {
         transform: scale(150%);

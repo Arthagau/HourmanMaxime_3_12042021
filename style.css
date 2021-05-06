@@ -32,7 +32,7 @@ body {
   color: #2b987d;
 }
 
-.intro, .fct__list, .rst, .menu {
+.intro, .fct__list, .rst, .menu, .title-menu, .orderbox {
   background-color: #f6f6f6;
 }
 
@@ -41,7 +41,7 @@ body, h1, h2 {
   font-family: "Roboto", sans-serif;
 }
 
-.header__logo, .menu h1 {
+.header__logo, .title-menu h1 {
   font-family: "Shrikhand", sans-serif;
 }
 
@@ -62,8 +62,8 @@ body, h1, h2 {
   align-items: center;
   width: 100%;
   height: 100%;
-  position: absolute;
-  animation: FadeOut 3500ms;
+  position: fixed;
+  animation: FadeOut 3500ms forwards;
 }
 
 #loader-spin {
@@ -72,8 +72,7 @@ body, h1, h2 {
   border-top: 10px solid #9356DC;
   border-bottom: 10px solid #FF79DA;
   border-radius: 80px;
-  animation: spin 2500ms;
-  animation-fill-mode: forwards;
+  animation: spin 2500ms forwards;
 }
 
 @keyframes spin {
@@ -98,7 +97,7 @@ body, h1, h2 {
     z-index: -1;
   }
 }
-@media screen and (min-width: 813px) {
+@media screen and (min-width: 901px) {
   #loader-spin {
     width: 150px;
     height: 150px;
@@ -146,7 +145,7 @@ body, h1, h2 {
   transform: translateY(0);
 }
 
-@media screen and (min-width: 813px) {
+@media screen and (min-width: 901px) {
   .fill-btn {
     transform: scale(0.5);
   }
@@ -179,17 +178,16 @@ body, h1, h2 {
   cursor: pointer;
 }
 .list__dishes:hover .list__dishes__description {
-  width: 60%;
+  width: 55%;
 }
 .list__dishes:hover .list__dishes__price {
-  padding: 25px 0 0 5px;
-  animation: SlideIn 0.4s ease-in-out 0s;
+  animation: SlideIn 0.4s ease-in 0s;
 }
 .list__dishes:hover .list__dishes__save {
   display: flex;
   width: 20%;
   position: relative;
-  animation: SlideIn 0.4s ease-in-out 0s;
+  animation: SlideIn 0.4s ease-in 0s;
 }
 .list__dishes:hover .list__dishes__save i {
   animation: rotate 0.8s forwards 0s;
@@ -244,9 +242,14 @@ body, h1, h2 {
     right: 32%;
   }
 }
-@media screen and (min-width: 813px) {
+@media screen and (min-width: 901px) {
   .header__return {
     right: 35%;
+  }
+}
+@media screen and (min-width: 1281px) {
+  .header__return {
+    right: 41%;
   }
 }
 /*---------------- FOOTER --------------------*/
@@ -280,7 +283,7 @@ body, h1, h2 {
   padding-right: 10px;
 }
 
-@media screen and (min-width: 813px) {
+@media screen and (min-width: 901px) {
   .footer {
     height: 300px;
   }
@@ -326,7 +329,7 @@ body, h1, h2 {
 .intro__description {
   padding-bottom: 20px;
 }
-@media screen and (min-width: 813px) {
+@media screen and (min-width: 901px) {
   .intro {
     width: 85%;
     height: 400px;
@@ -358,7 +361,7 @@ body, h1, h2 {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  box-shadow: 0px 2px 4px 0px rgba(214, 207, 207, 0.75);
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.21);
   margin: 10px 0;
   border-radius: 25px;
   height: 70px;
@@ -402,7 +405,7 @@ body, h1, h2 {
     font-size: 1.3rem;
   }
 }
-@media screen and (min-width: 813px) {
+@media screen and (min-width: 901px) {
   .fct {
     height: 600px;
   }
@@ -413,7 +416,6 @@ body, h1, h2 {
     height: 130px;
   }
   .fct__list__descr {
-    font-size: 1.6rem;
     padding-right: 20%;
   }
   .fct__list__number {
@@ -461,13 +463,13 @@ body, h1, h2 {
 .rst__title {
   padding: 1em 0 0.5em 1em;
   font-size: 2rem;
-  width: 100%;
+  width: 80%;
 }
 .rst__body {
   /* Restaurants cards */
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.21);
   margin: 10px auto;
   border-radius: 10px;
-  box-shadow: 0px 0px 5px -1px rgba(8, 7, 7, 0.281);
   height: 250px;
   width: 330px;
   position: relative;
@@ -530,15 +532,15 @@ body, h1, h2 {
     width: 80%;
     height: 40%;
   }
+  .rst__descr {
+    font-size: 1.2rem;
+  }
 }
-@media screen and (min-width: 813px) {
+@media screen and (min-width: 901px) {
   .rst {
     height: 350vh;
     margin: 20px auto;
     border-radius: 15px;
-  }
-  .rst__title {
-    font-size: 2rem;
   }
   .rst__body {
     width: 80%;
@@ -552,7 +554,7 @@ body, h1, h2 {
 
   .rst__descr {
     height: 20%;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
 
   .rst__descr i {
@@ -587,25 +589,25 @@ body, h1, h2 {
   height: 200%;
 }
 
+.title-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2% 6%;
+  border-radius: 40px 40px 0 0;
+  z-index: 1;
+}
+.title-menu h1 {
+  font-size: 1.4rem;
+}
+
 .menu {
   /* Menu block with 3 lists */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: 40px 40px 0 0;
-  z-index: 1;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 }
-.menu__title {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 4% 5% 3% 5%;
-}
-.menu__title h1 {
-  font-size: 1.5rem;
-}
-
 .menu__list {
   margin: 0 auto;
   flex-direction: column;
@@ -626,8 +628,9 @@ body, h1, h2 {
   background-color: white;
   position: relative;
   border-radius: 15px;
-  width: 95%;
-  height: 65px;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.21);
+  width: 100%;
+  height: 70px;
   margin-bottom: 15px;
   overflow: hidden;
 }
@@ -637,7 +640,7 @@ body, h1, h2 {
   justify-content: space-between;
   padding-left: 10px;
   height: 70%;
-  width: 78%;
+  width: 77%;
 }
 .list__dishes__description p, .list__dishes__description h3 {
   display: inline-block;
@@ -647,7 +650,7 @@ body, h1, h2 {
   width: 100%;
 }
 .list__dishes__price {
-  padding: 25px 20px 0 0;
+  padding: 7% 4% 0 0;
 }
 .list__dishes__save {
   /* checkbox for the saving animation */
@@ -664,6 +667,15 @@ body, h1, h2 {
   font-size: 180%;
 }
 
+.orderbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 150px;
+  margin: 0;
+}
+
 @media screen and (min-width: 650px) {
   .background {
     height: 180px;
@@ -675,20 +687,20 @@ body, h1, h2 {
     height: 350%;
   }
 
-  .menu__title h1 {
+  .title-menu h1 {
     font-size: 2rem;
   }
 
   .menu h2 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   .list__dishes {
     height: 100px;
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 }
-@media screen and (min-width: 813px) {
+@media screen and (min-width: 901px) {
   .background {
     height: 300px;
   }
@@ -696,21 +708,20 @@ body, h1, h2 {
     height: 350%;
   }
 
-  .menu__title {
-    font-size: 1.8rem;
+  .title-menu {
+    font-size: 2rem;
     padding: 3% 7%;
   }
-
-  .menu__title i {
+  .title-menu i {
     transform: scale(180%);
   }
 
   .list__dishes {
+    height: 130px;
     font-size: 1.3rem;
-    height: 17vh;
   }
   .list__dishes__description {
-    height: 8vh;
+    height: 60%;
     padding: 1vh 2vw;
   }
   .list__dishes__price {
@@ -722,12 +733,30 @@ body, h1, h2 {
     height: 35vh;
   }
 
-  .menu__list {
-    margin-bottom: 2rem;
+  .menu-title {
+    width: 95%;
+    height: 20%;
+  }
+  .menu-title i {
+    transform: scale(200%);
   }
 
-  .menu__title i {
-    transform: scale(200%);
+  .menu {
+    flex-direction: row;
+    height: 55vh;
+  }
+  .menu__list {
+    margin-bottom: 2rem;
+    width: 30%;
+  }
+
+  .list__dishes {
+    font-size: 1rem;
+    width: 100%;
+    height: 23%;
+  }
+  .list__dishes__description {
+    width: 70%;
   }
 }
 /*-------------------- BUTTONS ------------------*/
@@ -736,6 +765,7 @@ body, h1, h2 {
   width: 210px;
   margin-bottom: 30px;
   border: 1px solid lightgray;
+  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.21);
   border-radius: 250px;
   color: white;
   background: linear-gradient(350deg, #9356DC 0%, #FF79DA 80%);
@@ -755,7 +785,7 @@ body, h1, h2 {
   cursor: pointer;
 }
 
-@media screen and (min-width: 813px) {
+@media screen and (min-width: 901px) {
   .btn {
     width: 300px;
     height: 80px;

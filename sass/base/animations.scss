@@ -4,8 +4,8 @@
     @include FlexCenter;
     width: 100%;
     height: 100%;
-    position: absolute;
-    animation: FadeOut 3500ms;
+    position: fixed;
+    animation: FadeOut 3500ms forwards;
 }
  #loader-spin{
     width: 100px;
@@ -13,8 +13,7 @@
     border-top: 10px solid $primary;
     border-bottom: 10px solid $secondary;
     border-radius: 80px;
-    animation: spin 2500ms;
-    animation-fill-mode: forwards;
+    animation: spin 2500ms forwards;
     }
 
 @keyframes spin {
@@ -124,17 +123,16 @@ $anim-dur: 0.5s;
 .list__dishes:hover {
     cursor: pointer;
     .list__dishes__description {
-        width: 60%;
+        width: 55%;
     }
     .list__dishes__price {
-        padding: 25px 0 0 5px;
-        animation: SlideIn 0.4s ease-in-out 0s;
+        animation: SlideIn 0.4s ease-in 0s;
     }
     .list__dishes__save {
         display: flex;
         width: 20%;
         position: relative;
-        animation: SlideIn 0.4s ease-in-out 0s;
+        animation: SlideIn 0.4s ease-in 0s;
         & i {
             animation: rotate 0.8s forwards 0s;
         }

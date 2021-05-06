@@ -32,7 +32,11 @@
     right: 35%;
   }
 }
-
+@include laptop {
+  .header__return {
+    right: 41%;
+  }
+}
 /*---------------- FOOTER --------------------*/
 
 .footer {

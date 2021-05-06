@@ -4,6 +4,7 @@
         width: 210px;
         margin-bottom: 30px;
         border: 1px solid lightgray;
+        @include BoxShadow;
         border-radius: 250px;
         color: white;
         background: linear-gradient(350deg,$primary 0%, $secondary 80%);

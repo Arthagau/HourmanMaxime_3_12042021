@@ -21,7 +21,7 @@ $gradient-color: linear-gradient($primary 0%, $secondary 80%);
     background-color: $tertiary;
     color: darken($tertiary, 36%);
 }
-.intro, .fct__list, .rst, .menu {
+.intro, .fct__list, .rst, .menu, .title-menu, .orderbox {
     background-color: $bgcolor;
 }
 
@@ -36,7 +36,7 @@ $large: 2rem;
 body, h1, h2 {
     font-family: 'Roboto', sans-serif;
 }
-.header__logo, .menu h1 {
+.header__logo, .title-menu h1 {
     font-family: 'Shrikhand', sans-serif;
 }
 
