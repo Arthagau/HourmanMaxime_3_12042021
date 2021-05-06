@@ -27,7 +27,7 @@ $gradient-color: linear-gradient($primary 0%, $secondary 80%);
 
 /*---------------- Site typo ---------------*/
 
-$small: 0.85rem;
+$small: 0.95rem;
 $medium: 1.3rem;
 $large: 2rem;
 
@@ -43,7 +43,6 @@ body, h1, h2 {
 .rst__body, .menu, .footer, .btn {
     font-size: $small;
 }
-
 .menu h2 {
     text-transform: uppercase;
     font-size: $medium;

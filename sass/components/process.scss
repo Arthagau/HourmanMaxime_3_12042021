@@ -31,7 +31,8 @@
         &__descr {
             @include FlexCentAround;
             width: 75%;
-            padding-right: 10%;
+            padding-right: 2%;
+            font-size: 1.1rem;
         }
     }
     @include phone {

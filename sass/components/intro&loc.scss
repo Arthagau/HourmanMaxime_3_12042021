@@ -5,8 +5,11 @@
     background-color: #eaeaea;
     &__town {
        @include FlexCentBetween;
-        width: 140px;
+        width: 160px;
         padding-right: 30px;
+    }
+    & p {
+        font-size: 1.2rem;
     }
 }
 
@@ -17,11 +20,20 @@
     align-items: center;
     &__title, &__description {
         text-align: center;
-        width: 78%;
+        width: 90%;
         padding-top: 25px;
     }
     &__description {
         padding-bottom: 20px;
+        font-size: 1.2rem;
+    }
+    @include phone {
+        &__title {
+            font-size: $large;
+        }
+        &__description {
+            font-size: $medium;
+        }
     }
     @include tablets {
         width: 85%;
