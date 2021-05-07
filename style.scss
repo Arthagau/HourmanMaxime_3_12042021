@@ -7,6 +7,10 @@
 body {
     z-index: 1
 }
+.hiddensvg {
+    width: 0;
+    height: 0;
+}
 @import "./sass/base/typography.scss";
 @import "./sass/utils/mixins.scss";
 @import "./sass/base/responsive.scss";
