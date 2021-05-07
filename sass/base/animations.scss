@@ -5,7 +5,8 @@
     width: 100%;
     height: 100%;
     position: fixed;
-    animation: FadeOut 3500ms forwards;
+    animation: FadeOut 2300ms forwards;
+    background-color: rgb(97, 96, 96);
 }
  #loader-spin{
     width: 100px;
@@ -13,7 +14,7 @@
     border-top: 10px solid $primary;
     border-bottom: 10px solid $secondary;
     border-radius: 80px;
-    animation: spin 2500ms forwards;
+    animation: spin 2900ms forwards;
     }
 
 @keyframes spin {
@@ -30,11 +31,15 @@
 }
 @keyframes FadeOut {
     0% {
-        background-color: rgba(211, 211, 211, 0.99);
+        opacity: 1;
+        z-index: 5;
+    }
+    70% {
+        opacity: 0.8;
         z-index: 5;
     }
     100% {
-        background-color: rgba(211, 211, 211, 0);
+        opacity: 0;
         z-index: -1;
     }
 }
